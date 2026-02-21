@@ -1,0 +1,17 @@
+package com.academia.ejercicios.ej1;
+
+// --- AutoCloseable ---
+public class TransactionLog implements AutoCloseable {
+    private boolean open = true;
+
+    public void log(String message) {
+        if (!open) throw new IllegalStateException("Log cerrado");
+        System.out.println("[LOG] " + message);
+    }
+
+    @Override
+    public void close() {
+        open = false;
+        System.out.println("[LOG] TransactionLog cerrado.");
+    }
+}
