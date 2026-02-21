@@ -1,4 +1,4 @@
-package com.adcademia.ejercicios.ej2;
+package com.academia.ejercicios.ej2;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
